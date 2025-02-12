@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
-#information on school file
-filename="school"
+#fizzbuzz for multiple of 3 and 5
+n=1
 
-if [ -e $filename ]; then
-    echo "school file exists"
-    if [ ! -s $filename ]; then
-        echo "school file is empty"
-    else
-        echo "school file is not empty"
-    fi
-    if [ -f $filename ]; then
-        echo "school is a regular file"
-    fi
-else
-    echo "school file does not exist"
-fi
+while (( n  <= 100 ));do
+	if ((n % 3 == 0 && n % 5 == 0));then
+	   echo "FizzBuzz"
+	elif ((n % 3 ==0));then
+	  echo "Fizz"
+	elif ((n % 5 ==0));then
+	  echo "Buzz"
+	else
+	  echo "$n"
+	fi
+	  ((n++))
+	
+done
