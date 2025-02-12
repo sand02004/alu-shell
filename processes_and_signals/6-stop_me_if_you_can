@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 #using case and while for iteration
 n=1
